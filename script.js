@@ -32,6 +32,16 @@ function showMood(mood) {
   document.getElementById('messageBox').innerText = message;
 }
 
+function showMessage() {
+  const bgMusic = document.getElementById("bgMusic");
+  if (bgMusic.paused) {
+    bgMusic.play();  // ✅ music starts only after user click
+  }
+
+  const randomIndex = Math.floor(Math.random() * messages.length);
+  const message = messages[randomIndex];
+  document.getElementById('messageBox').innerText = message;
+}
 function showRandom() {
     document.getElementById("bgMusic").play(); // Ensure music plays
     const randomIndex = Math.floor(Math.random() * allMessages.length);
