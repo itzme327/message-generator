@@ -33,9 +33,9 @@ function showMood(mood) {
 }
 
 function showMessage() {
-  const bgMusic = document.getElementById("bgMusic");
-  if (bgMusic.paused) {
-    bgMusic.play();  // ✅ music starts only after user click
+  const mylove = document.getElementById("mylove");
+  if (mylove.paused) {
+    mylove.play();  // ✅ music starts only after user click
   }
 
   const randomIndex = Math.floor(Math.random() * messages.length);
@@ -43,7 +43,7 @@ function showMessage() {
   document.getElementById('messageBox').innerText = message;
 }
 function showRandom() {
-    document.getElementById("bgMusic").play(); // Ensure music plays
+    document.getElementById("mylove").play(); // Ensure music plays
     const randomIndex = Math.floor(Math.random() * allMessages.length);
     document.getElementById("messageBox").innerText = allMessages[randomIndex];
 }
@@ -77,10 +77,15 @@ function closePopup() {
 // Show popup after 8 seconds
 setTimeout(showPopup, 8000);
 function toggleMusic() {
-    const music = document.getElementById("bgMusic");
+    const music = document.getElementById("mylove");
     if (music.paused) {
         music.play();
     } else {
         music.pause();
     }
 }
+function playMusic() {
+  const audio = document.getElementById("mylove");
+  audio.play();
+}
+
