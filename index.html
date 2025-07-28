@@ -2,38 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Message Generator 💖</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Oyy chunchu💕</h1>
-    <p>Naa prema theliyaali ante idhi click cheyyi 💌</p>
+<body onclick="playMusic()">
+    <h1>Hey Love, neekosam oka bujji giftuuu...💌</h1>
+    
+    <div id="messageBox">choose a mood,appudu neeku oka msg osthaadhi 💬</div>
+
     <div class="buttons">
-        <button onclick="showRandom()">💘 Random Love</button>
-        <button onclick="showMood('romantic')">Feeling Romantic</button>
-        <button onclick="showMood('missed')">Feeling Missed</button>
+        <button onclick="showMood('random')">Random</button>
+        <button onclick="showMood('romantic')">Romantic</button>
+        <button onclick="showMood('missed')">Miss You</button>
         <button onclick="showMood('low')">Feeling Low</button>
-        <button onclick="toggleMusic()">🎵 Toggle Music</button>
-        <button onclick="playMusic(); showMessage()">Tell me why she loves me</button>
-
-
+        <button onclick="toggleMusic()">🔊 Play/Pause Song</button>
     </div>
-    <div id="messageBox"></div>
+
+    <div class="hearts"></div>
 
     <!-- Surprise Popup -->
     <div id="surprisePopup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
-            <p>💬 hey bangaram... I just want you to know — I love you more than words can say. 💗</p>
+            You are the most special person in my world 💗 — I love you so much!!!
         </div>
     </div>
 
-    <div class="hearts"></div>
-    <audio id="bgMusic" autoplay loop hidden>
-  <source src="mylove.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+    <!-- Background Music -->
+    <audio id="bgmusic" src="https://drive.google.com/file/d/1yXe37_psgFGu3GzrECIDCzbswqGVEcbo/view?usp=sharing" preload="auto"></audio>
 
     <script src="script.js"></script>
 </body>
