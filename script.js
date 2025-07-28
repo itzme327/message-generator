@@ -30,24 +30,10 @@ function showMood(mood) {
   const randomIndex = Math.floor(Math.random() * msgs.length);
   const message = msgs[randomIndex];
   document.getElementById('messageBox').innerText = message;
-}
 
-function showMessage() {
-  const mylove = document.getElementById("mylove");
-  if (mylove.paused) {
-    mylove.play();  // ✅ music starts only after user click
-  }
-
-  const randomIndex = Math.floor(Math.random() * messages.length);
-  const message = messages[randomIndex];
-  document.getElementById('messageBox').innerText = message;
+  const music = document.getElementById("bgmusic");
+  if (music.paused) music.play(); // play only once after interaction
 }
-function showRandom() {
-    document.getElementById("mylove").play(); // Ensure music plays
-    const randomIndex = Math.floor(Math.random() * allMessages.length);
-    document.getElementById("messageBox").innerText = allMessages[randomIndex];
-}
-
 
 const heartContainer = document.querySelector('.hearts');
 
@@ -58,34 +44,34 @@ function createHeart() {
   heart.style.left = Math.random() * 100 + "vw";
   heart.style.animationDuration = 2 + Math.random() * 3 + "s";
   heartContainer.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 5000);
+  setTimeout(() => heart.remove(), 5000);
 }
 
 setInterval(createHeart, 300);
+
 // Surprise popup logic
 function showPopup() {
-    document.getElementById('surprisePopup').style.display = 'block';
+  document.getElementById('surprisePopup').style.display = 'block';
 }
 
 function closePopup() {
-    document.getElementById('surprisePopup').style.display = 'none';
+  document.getElementById('surprisePopup').style.display = 'none';
 }
 
-// Show popup after 8 seconds
 setTimeout(showPopup, 8000);
+
+// Manual toggle for music button
 function toggleMusic() {
-    const music = document.getElementById("mylove");
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-}
-function playMusic() {
-  const audio = document.getElementById("mylove");
-  audio.play();
+  const music = document.getElementById("bgmusic");
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
 }
 
+// First click anywhere starts the music
+function playMusic() {
+  const audio = document.getElementById("bgmusic");
+  if (audio.paused) audio.play();
+}
