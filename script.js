@@ -6,22 +6,24 @@ const messages = {
     "Nv naaku dhorikina oka peddha chettha kuppa... hehehe"
   ],
   romantic: [
-    "Every time I look at you, I fall in love again. 💘",
-    "You're my favorite place to be. 🌍",
-    "I want to grow old with you. ❤️",
-    "Our love is my favorite story. 📖"
+    "Every time I look at you, I fall in love again💘",
+    "oopiri aadanantha varaku hug cheskovaali ninnu",
+    "saraddhaaga nee breath naa breath mix cheddaamaa❤️",
+    "Evvaru leni world ki vellipovaali only nv nenu undaali anthe📖"
+    "Naa waist endhuku antha sannagaa untadho thelusaa nee chethullo odhigipodaaniki"
   ],
   missed: [
-    "I miss your voice, your laugh, your everything. 😔",
+    "I miss your voice, your laugh, your everything 😔",
     "Ninnu chaala miss avthunnaa — my heart needs you. 🥺",
     "Not being with you feels empty. 😞",
     "Wish I could hug you right now. 🤗"
+    "Ento em chesina nuvve gurthosthunnaav..."
   ],
   low: [
-    "Even when you're down, you're still my sunshine. ☀️",
-    "I’m always here for you — no matter what. 🤝",
-    "You're stronger than you know. 💪",
-    "Take a deep breath, my love. You’ve got this. 🌻"
+    "Nv elaa unaa ye situation lo unna eppudu nen neethone untaa ☀️",
+    "Nv baadhalo unnappudu ventane naa smiling face raavaali naa mind loki 🤝",
+    "Neeku thelusaa Nv chaala strong enough neeku thelisina dhaani kannaa 💪",
+    "Ey... endhuku raa feel avthunnaav neekosam ee picchidhi undhi ani marchipoku...🌻"
   ]
 };
 
